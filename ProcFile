@@ -1,2 +1,1 @@
-release: python manage.py migrate
-web: gunicorn Ecomm.wsgi
+web: gunicorn Ecomm.wsgi --log-file -
