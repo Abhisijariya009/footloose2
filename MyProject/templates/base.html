@@ -113,7 +113,7 @@ const csrf = document.getElementsByName('csrfmiddlewaretoken')[0].value
 const sendSearchData = (name) => {
 	$.ajax({
 			type: 'POST',
-			url: 's/',
+			url: url+'s/',
 			data:{
 				'csrfmiddlewaretoken':csrf,
 				'name': name,
