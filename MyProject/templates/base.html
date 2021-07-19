@@ -100,12 +100,7 @@
 <div style="max-height: 8.3rem;"class="bld not-visible" id="bld">
 
 </div>
-<div class="cb" id="cb">
-				{% block content %}
 
-
-				{% endblock content %}
-</div>
 <script type="text/javascript">
 const url = window.location.href
 const searchBox = document.getElementById('search-form')
@@ -118,7 +113,7 @@ const csrf = document.getElementsByName('csrfmiddlewaretoken')[0].value
 const sendSearchData = (name) => {
 	$.ajax({
 			type: 'POST',
-			url: 'foot-loose.herokuapp.com/s/',
+			url: 's/',
 			data:{
 				'csrfmiddlewaretoken':csrf,
 				'name': name,
@@ -176,15 +171,25 @@ const sendSearchData = (name) => {
 		sendSearchData(e.target.value)
 
 	})
+
+</script>
+<div class="cb" id="cb">
+				{% block content %}
+
+
+				{% endblock content %}
+</div>
+<script type="text/javascript">
 	cb.addEventListener('click',m =>{
+		if(cb.classList.contains('not-visible')){
+		}
+		else{
 		resultsBox.classList.add('not-visible')
 		bld.innerHTML = ""
 		bld.classList.add('not-visible')
+		}
 	})
-
 </script>
-
-
 
 	<!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
 
