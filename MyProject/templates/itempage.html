@@ -72,7 +72,7 @@
   const m = (v,s) => {
     $.ajax({
         type: 'POST',
-        url:'http://127.0.0.1:8000/add_to_cart/'+v+'/',
+        url:'https://foot-loose.herokuapp.com/add_to_cart/'+v+'/',
         data:{
           'csrfmiddlewaretoken':csrf,
           'size':s
@@ -175,7 +175,7 @@ const h=(st)=>{
   var stay = st
   $.ajax({
       type: 'POST',
-      url:'http://127.0.0.1:8000/review/{{product.pk}}/',
+      url:'https://foot-loose.herokuapp.com/review/{{product.pk}}/',
       data:{
         'csrfmiddlewaretoken':csrf,
         'review':review,
