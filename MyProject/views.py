@@ -43,11 +43,6 @@ def checkout(request):
     order.transaction_id = payment['id']
     context = {'items':items , 'order':order,'payment':payment}
     return render(request,'checkout.html',context)
-def base3(request):
-    products = Product.objects.all()
-    context = {'products':products}
-    return render(request,'itempagetr.html',context)
-
 def itempage(request,pk = None):
     if pk:
         if request.user.is_authenticated:
@@ -278,7 +273,6 @@ def rate_image(request):
 def review(request,pk=None):
     if request.is_ajax():
         if pk:
-            print(24222222222222222222222222222222222222222222222222222222222222222222222)
             rev = request.POST.get('review')
             com = request.POST.get('comment')
             rt = request.POST.get('stay')
