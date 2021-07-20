@@ -72,12 +72,14 @@
 				<li class="nav-item">
           <a class="nav-link" href="{% url 'mp:sports' pk='formals' %}">formals</a>
         </li>
+	      <li class="nav-item">
+		      <form style="max-width:15rem;hidden;" id= "search-form" class="" >
+			  {% csrf_token %}
+			  <input id = "search-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			</form>
+		      </li>
       </ul>
 			<div>
-        <form style="max-width:15rem;hidden;" id= "search-form" class="" >
-          {% csrf_token %}
-          <input id = "search-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        </form>
         <div id="results-box" class="results-card list-group list-group-flush not-visible" ></div>
       </div>
 			</div>
