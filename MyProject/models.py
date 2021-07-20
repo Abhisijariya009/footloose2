@@ -15,7 +15,7 @@ class Product(models.Model):
     name = models.CharField(max_length=100,null=True)
     price = models.FloatField()
     discription = models.TextField(max_length=500,null=True)
-    image = models.ImageField(null=True,upload_to='images',blank = True)
+    image = models.ImageField(null=True,blank = True)
     category = models.CharField(max_length=100,null=True)
     starrate = models.IntegerField(null=True)
     brand = models.CharField(max_length=100,null=True)
