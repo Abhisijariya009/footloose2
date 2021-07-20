@@ -131,7 +131,7 @@
     console.log(name);
     $.ajax({
         type: 'POST',
-        url:'http://127.0.0.1:8000/shippingadd/',
+        url:'https://foot-loose.herokuapp.com/shippingadd/',
         data:{
           'csrfmiddlewaretoken':csrf,
           'name':name,
