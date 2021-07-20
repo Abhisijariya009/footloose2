@@ -73,9 +73,9 @@
           <a class="nav-link" href="{% url 'mp:sports' pk='formals' %}">formals</a>
         </li>
 	      <li class="nav-item">
-		      <form style="max-width:15rem;hidden;" id= "search-form" class="" >
+		      <form style="max-width:8rem;" id= "search-form" class="" >
 			  {% csrf_token %}
-			  <input id = "search-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+			  <input style="max-width:8rem;"  id = "search-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 			</form>
 		      </li>
       </ul>
