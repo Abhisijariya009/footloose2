@@ -74,10 +74,14 @@
         </li>
       </ul>
 			<div>
-        <form style="margin-right: 70px; overflow:hidden;" id= "search-form" class="form-inline" >
+	<form id= "search-form" class="form-inline my-2 my-lg-0">
+      {% csrf_token %}
+          <input id = "search-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    </form>
+<!--         <form style="margin-right: 70px; overflow:hidden;" id= "search-form" class="form-inline" >
           {% csrf_token %}
           <input id = "search-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        </form>
+        </form> -->
         <div id="results-box" class="results-card list-group list-group-flush not-visible" ></div>
       </div>
 			</div>
