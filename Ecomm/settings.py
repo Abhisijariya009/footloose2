@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'MyProject',
+    'storages'
 ]
 
 MIDDLEWARE = [
@@ -132,6 +133,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+
+AWS_ACCESS_KEY_ID = 'AKIATATOZOAU5VLX7PGN'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'footloose-bucket'
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
