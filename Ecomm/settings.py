@@ -134,8 +134,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-AWS_ACCESS_KEY_ID = 'AKIATATOZOAU5VLX7PGN'
-AWS_SECRET_ACCESS_KEY = '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'
+AWS_ACCESS_KEY_ID = 'AKIATATOZOAUVKZVI3VQ'
+AWS_SECRET_ACCESS_KEY = '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'
 AWS_STORAGE_BUCKET_NAME = 'footloose-bucket'
 
 AWS_S3_FILE_OVERWRITE = False
