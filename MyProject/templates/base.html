@@ -55,7 +55,7 @@
 	    }
 
 	</script>
-  <nav class="navbar sticky navbar-expand-lg navbar-dark bg-dark">
+   <nav class="navbar sticky navbar-expand-lg navbar-dark bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -72,14 +72,12 @@
 				<li class="nav-item">
           <a class="nav-link" href="{% url 'mp:sports' pk='formals' %}">formals</a>
         </li>
-	      <li class="nav-item">
-		      <form style="max-width:8rem;" id= "search-form" class="" >
-			  {% csrf_token %}
-			  <input style="max-width:8rem;"  id = "search-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-			</form>
-		      </li>
       </ul>
 			<div>
+        <form style="margin-right: 70px; overflow:hidden;" id= "search-form" class="form-inline" >
+          {% csrf_token %}
+          <input id = "search-input" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        </form>
         <div id="results-box" class="results-card list-group list-group-flush not-visible" ></div>
       </div>
 			</div>
