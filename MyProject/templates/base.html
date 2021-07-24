@@ -134,9 +134,10 @@ const sendSearchData = (name) => {
 						bld.innerHTML = ""
 								data.forEach(res=>{
 									const l = res.image
+									console.log(l)
 									const r = l.slice(1,-1);
-									const p = "https://footloose-bucket.s3.amazonaws.com/" +r
-									p = """+p+"""
+									const p = "'https://footloose-bucket.s3.amazonaws.com/" +r
+									p = "'"+p+"'"
 									console.log(p)
 									res.name[0]=res.name[0].toUpperCase()
 									resultsBox.innerHTML += `
