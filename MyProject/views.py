@@ -150,7 +150,8 @@ def search(request):
         if len(qs) > 0 and len(name)>0:
             data = []
             for pos in qs:
-                result = json.dumps(pos.image, cls=ExtendedEncoder)
+                resu = json.dumps(pos.image, cls=ExtendedEncoder)
+                result = resu[0]+resu[1:-2]+resu[-1]
                 item = {
                     'pk':pos.pk,
                     'name':pos.name,
