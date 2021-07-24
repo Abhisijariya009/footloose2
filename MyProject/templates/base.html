@@ -135,13 +135,14 @@ const sendSearchData = (name) => {
 								data.forEach(res=>{
 									const l = res.image
 									const r = l.slice(1,-1);
-									console.log(r); 
+									const p = "https://footloose-bucket.s3.amazonaws.com/" +r
+									console.log(p)
 									res.name[0]=res.name[0].toUpperCase()
 									resultsBox.innerHTML += `
 										<div style="height:auto;font-weight: 100;width:auto;"class = "searchres list-group list-group-flush">
 										<a style="text-decoration: none;"href = "{% url 'mp:itempage' %}${res.pk}" class="item">
 										<div class="col-10 list-group list-group-flush">
-										<h5 style = "color : black;"><img style="width:4rem;height:4rem;margin-right: 2rem; src="https://footloose-bucket.s3.amazonaws.com/${r}" alt="oops" class="img-fluid">      ${res.name}</h5>
+										<h5 style = "color : black;"><img style="width:4rem;height:4rem;margin-right: 2rem; src="${p}" alt="oops" class="img-fluid">      ${res.name}</h5>
 										</div>
 										</a>
 										</div>`
