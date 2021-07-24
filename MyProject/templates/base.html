@@ -135,6 +135,7 @@ const sendSearchData = (name) => {
 								data.forEach(res=>{
 									const l = res.image
 									const r = l.slice(1,-1);
+									console.log(r); 
 									res.name[0]=res.name[0].toUpperCase()
 									resultsBox.innerHTML += `
 										<div style="height:auto;font-weight: 100;width:auto;"class = "searchres list-group list-group-flush">
